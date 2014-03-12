@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nameproduct:</strong>
+  <%= @product.nameproduct %>
+</p>
+
+<p>
+  <strong>Firmwareversion:</strong>
+  <%= @product.firmwareversion %>
+</p>
+
+<p>
+  <strong>Descriptionproduct:</strong>
+  <%= @product.descriptionproduct %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @product.active %>
+</p>
+
+<p>
+  <strong>Ticket:</strong>
+  <%= @product.ticket_id %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

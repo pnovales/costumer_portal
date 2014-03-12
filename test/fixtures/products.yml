@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nameproduct: MyString
+  firmwareversion: MyString
+  descriptionproduct: MyString
+  active: false
+  ticket_id: 1
+
+two:
+  nameproduct: MyString
+  firmwareversion: MyString
+  descriptionproduct: MyString
+  active: false
+  ticket_id: 1
