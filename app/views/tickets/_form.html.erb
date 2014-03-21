@@ -1,18 +1,44 @@
-<%= simple_form_for(@ticket) do |f| %>
-  <%= f.error_notification %>
+<div class="authform">
+  <%= simple_form_for(@ticket) do |f| %>
+    <!--<h3>New Ticket</h3>-->
+    <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :descriptionticket %>
-    <%= f.input :priority %>
-    <%= f.input :company %>
-    <%= f.input :status %>
-    <%= f.input :assignedto %>
-    <%= f.input :contactname %>
-    <%= f.input :user_id %>
-  </div>
+    <!--<div class="form-inputs">-->
+      <div class="form-group">
+        <%= f.input :title, :autofocus => true %>
+      </div>
+      <div class="form-group">
+        <%= f.input :descriptionticket %>
+      </div>
+      <div class="form-group">
+        <%= f.input :priority %>
+      </div>
+      <div class="form-group">
+        <%= f.input :company %>
+      </div>
+      <div class="form-group">
+        <%= f.input :status %>
+      </div>
+      <div class="form-group">
+        <%= f.input :assignedto %>
+      </div>
+      <div class="form-group">
+        <%= f.input :contactname %>
+      </div>
+      <div class="form-group">
+        <%= f.input :user_id %>
+      </div>
+    <!--</div>-->
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+    <!--<div class="form-actions">-->
+      <%= f.button :submit, :class => 'button right' %>
+    <!--</div>-->
+  <% end %>
+</div>
+
+
+
+
+  
+
+
