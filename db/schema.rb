@@ -11,21 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140312064505) do
+ActiveRecord::Schema.define(version: 20140312030842) do
 
   create_table "categories", force: true do |t|
-    t.string   "namecategory"
+    t.string   "name"
     t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "products", force: true do |t|
-    t.string   "nameproduct"
-    t.string   "firmwareversion"
-    t.string   "descriptionproduct"
+    t.string   "name"
+    t.string   "firmware_version"
+    t.string   "description"
     t.boolean  "active"
     t.integer  "ticket_id"
+    t.string   "number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -43,20 +44,13 @@ ActiveRecord::Schema.define(version: 20140312064505) do
 
   create_table "tickets", force: true do |t|
     t.string   "title"
-    t.text     "descriptionticket"
+    t.text     "description"
     t.string   "priority"
     t.string   "company"
     t.string   "status"
-    t.string   "assignedto"
-    t.string   "contactname"
+    t.string   "assigned_to"
+    t.string   "contact"
     t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "types", force: true do |t|
-    t.string   "nametype"
-    t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

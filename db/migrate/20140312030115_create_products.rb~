@@ -5,6 +5,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :firmware_version
       t.string :description
       t.boolean :active
+      t.integer :ticket_id
       t.string :number
       t.integer :category_id
 
