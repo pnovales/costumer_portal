@@ -1,9 +1,13 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!
+  before_action :find_user
 
   def index
     authorize! :index, @user, :message => 'Not authorized as an administrator.'
+=begin
     @users = User.all
+=end
+    @user = User.where(:ticket_id => @ticket.id)
   end
 
   def show
@@ -28,6 +32,12 @@ class UsersController < ApplicationController
       redirect_to users_path, :notice => "User deleted."
     else
       redirect_to users_path, :notice => "Can't delete yourself."
+    end
+  end
+
+  def find_user
+    if params[:ticket_id]
+      @ticket = Ticket.find(params[:ticket_id])
     end
   end
 end
