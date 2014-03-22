@@ -6,8 +6,8 @@
 </p>
 
 <p>
-  <strong>Descriptionticket:</strong>
-  <%= @ticket.descriptionticket %>
+  <strong>Description:</strong>
+  <%= @ticket.description %>
 </p>
 
 <p>
@@ -26,18 +26,23 @@
 </p>
 
 <p>
-  <strong>Assignedto:</strong>
-  <%= @ticket.assignedto %>
+  <strong>Assigned to:</strong>
+  <%= @ticket.assigned_to %>
 </p>
 
 <p>
-  <strong>Contactname:</strong>
-  <%= @ticket.contactname %>
+  <strong>Contact name:</strong>
+  <%= @ticket.contact %>
 </p>
 
 <p>
   <strong>User:</strong>
   <%= @ticket.user_id %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @ticket.product_id %>
 </p>
 
 <%= link_to 'Edit', edit_ticket_path(@ticket) %> |
