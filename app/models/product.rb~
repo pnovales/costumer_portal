@@ -1,4 +1,4 @@
 class Product < ActiveRecord::Base
-  has_one :category
+  belong_to :category
   has_many :tickets
 end

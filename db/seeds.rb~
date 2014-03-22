@@ -130,7 +130,7 @@ user.save
     ]
  
 
-  categories.each { |category_attrs| Category.create!(category_attrs) and puts '.' }
+  categories.each { |categories_attrs| Category.create!(taxon_attrs) and puts '.' }
      
   products.each { |product_attrs|   Product.create!(product_attrs) and puts '.' }
 

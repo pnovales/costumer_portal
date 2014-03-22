@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 20140312030842) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
-    t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -25,8 +24,8 @@ ActiveRecord::Schema.define(version: 20140312030842) do
     t.string   "firmware_version"
     t.string   "description"
     t.boolean  "active"
-    t.integer  "ticket_id"
     t.string   "number"
+    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -51,6 +50,7 @@ ActiveRecord::Schema.define(version: 20140312030842) do
     t.string   "assigned_to"
     t.string   "contact"
     t.integer  "user_id"
+    t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
