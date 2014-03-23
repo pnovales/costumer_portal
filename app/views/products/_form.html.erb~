@@ -1,5 +1,5 @@
 <div class="authform">
-    <% categories = Category.all.collect {|category| category } %>
+    <% categories = Category.all.collect {|category| category.name } %>
     <%= simple_form_for(@product) do |f| %>
       <%= f.error_notification %>
       <%= f.input :name %>
