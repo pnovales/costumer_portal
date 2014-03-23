@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 20140312030842) do
     t.datetime "updated_at"
   end
 
+  add_index "products", ["category_id"], name: "index_products_on_category_id"
+
   create_table "roles", force: true do |t|
     t.string   "name"
     t.integer  "resource_id"
@@ -54,6 +56,8 @@ ActiveRecord::Schema.define(version: 20140312030842) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "tickets", ["user_id", "product_id"], name: "index_tickets_on_user_id_and_product_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

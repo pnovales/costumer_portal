@@ -1,5 +1,7 @@
 class TicketsController < ApplicationController
   before_action :set_ticket, only: [:show, :edit, :update, :destroy]
+  before_action :find_product
+  before_action :find_user
 
   # GET /tickets
   # GET /tickets.json
@@ -10,6 +12,7 @@ class TicketsController < ApplicationController
   # GET /tickets/1
   # GET /tickets/1.json
   def show
+    @tickets = Ticket.find(params[:id])
   end
 
   # GET /tickets/new
@@ -71,4 +74,17 @@ class TicketsController < ApplicationController
     def ticket_params
       params.require(:ticket).permit(:title, :description, :priority, :company, :status, :assigned_to, :contact, :user_id, :product_id)
     end
+
+    def find_product
+      if params[:product_id]
+        @product = Product.find(params[:product_id])
+      end
+    end
+
+    def find_user
+      if params[:user_id]
+        @user = User.find(params[:user_id])
+      end
+    end
+
 end

@@ -1,1 +1,1 @@
-json.extract! @ticket, :id, :title, :descriptionticket, :priority, :company, :status, :assignedto, :contactname, :user_id, :created_at, :updated_at
+json.extract! @ticket, :id, :title, :description, :priority, :company, :status, :assigned_to, :contact, :user_id, product_id, :created_at, :updated_at

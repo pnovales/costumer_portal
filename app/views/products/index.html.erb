@@ -4,10 +4,11 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Firmware_version</th>
+      <th>Firmware</th>
       <th>Description</th>
       <th>Active</th>
       <th>Category</th>
+      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -21,10 +22,10 @@
         <td><%= product.firmware_version %></td>
         <td><%= product.description %></td>
         <td><%= product.active %></td>
-        <td><%= product.category_id %></td>
+        <td><%= product.category.name %></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', product, method: :delete,   data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

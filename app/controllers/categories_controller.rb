@@ -1,15 +1,18 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
 
+
   # GET /categories
   # GET /categories.json
   def index
     @categories = Category.all
+
   end
 
   # GET /categories/1
   # GET /categories/1.json
   def show
+    @categories = Category.find(params[:id])
   end
 
   # GET /categories/new
@@ -71,4 +74,6 @@ class CategoriesController < ApplicationController
     def category_params
       params.require(:category).permit(:name)
     end
+
+
 end

@@ -20,13 +20,13 @@ user.save
 
   categories = [
     {
-      name: "Vegetales"
+      name: "Phones"
     },
     {
-      name: "Ropa"
+      name: "switches"
     },
     {
-      name: "Electrodomesticos"
+      name: "Cameras"
     },
   ]
 
@@ -39,73 +39,51 @@ user.save
       number: "product_#{rand 100}",
       category_id: 1 + rand(2)
     },
-  {
-      name: Faker::Company.name,
-      firmware_version: '3',
-      description: Faker::Lorem.paragraph,
-      active: true,
-      number: "product_#{rand 100}",
-      category_id: 1 + rand(2)
+    {
+        name: Faker::Company.name,
+        firmware_version: '3',
+        description: Faker::Lorem.paragraph,
+        active: true,
+        number: "product_#{rand 100}",
+        category_id: 1 + rand(2)
     },
-  {
-      name: Faker::Company.name,
-      firmware_version: '3',
-      description: Faker::Lorem.paragraph,
-      active: true,
-      number: "product_#{rand 100}",
-      category_id: 1 + rand(2)
+    {
+        name: Faker::Company.name,
+        firmware_version: '3',
+        description: Faker::Lorem.paragraph,
+        active: true,
+        number: "product_#{rand 100}",
+        category_id: 1 + rand(2)
     },
-  {
-      name: Faker::Company.name,
-      firmware_version: '3',
-      description: Faker::Lorem.paragraph,
-      active: true,
-      number: "product_#{rand 100}",
-      category_id: 1 + rand(2)
+    {
+        name: Faker::Company.name,
+        firmware_version: '3',
+        description: Faker::Lorem.paragraph,
+        active: true,
+        number: "product_#{rand 100}",
+        category_id: 1 + rand(2)
     },
-  {
-      name: Faker::Company.name,
-      firmware_version: '3',
-      description: Faker::Lorem.paragraph,
-      active: true,
-      number: "product_#{rand 100}",
-      category_id: 1 + rand(2)
+    {
+        name: Faker::Company.name,
+        firmware_version: '3',
+        description: Faker::Lorem.paragraph,
+        active: true,
+        number: "product_#{rand 100}",
+        category_id: 1 + rand(2)
     },
-  {
-      name: Faker::Company.name,
-      firmware_version: '3',
-      description: Faker::Lorem.paragraph,
-      active: true,
-      number: "product_#{rand 100}",
-      category_id: 1 + rand(2)
+    {
+        name: Faker::Company.name,
+        firmware_version: '3',
+        description: Faker::Lorem.paragraph,
+        active: true,
+        number: "product_#{rand 100}",
+        category_id: 1 + rand(2)
     },
   ]
   
 
   tickets = [
-  {
-    title: Faker::Lorem.name,
-    description: Faker::Lorem.paragraph,
-    priority: ['high','low','normal'][rand 3],
-    company: Faker::Company.name,
-    status:  ['open','cloused','delayed'][rand 3],
-    assigned_to: Faker::Lorem.name,
-    contact: Faker::Lorem.name,
-    user_id: 1,
-    product_id: rand(3)
-  },
-  {
-    title: Faker::Lorem.name,
-    description: Faker::Lorem.paragraph,
-    priority: ['high','low','normal'][rand 3],
-    company: Faker::Company.name,
-    status:  ['open','cloused','delayed'][rand 3],
-    assigned_to: Faker::Lorem.name,
-    contact: Faker::Lorem.name,
-    user_id: 1,
-    product_id: rand(3)
-  },
-  {
+    {
       title: Faker::Lorem.name,
       description: Faker::Lorem.paragraph,
       priority: ['high','low','normal'][rand 3],
@@ -116,7 +94,7 @@ user.save
       user_id: 1,
       product_id: rand(3)
     },
-  {
+    {
       title: Faker::Lorem.name,
       description: Faker::Lorem.paragraph,
       priority: ['high','low','normal'][rand 3],
@@ -127,6 +105,28 @@ user.save
       user_id: 1,
       product_id: rand(3)
     },
+    {
+        title: Faker::Lorem.name,
+        description: Faker::Lorem.paragraph,
+        priority: ['high','low','normal'][rand 3],
+        company: Faker::Company.name,
+        status:  ['open','cloused','delayed'][rand 3],
+        assigned_to: Faker::Lorem.name,
+        contact: Faker::Lorem.name,
+        user_id: 1,
+        product_id: rand(3)
+    },
+    {
+        title: Faker::Lorem.name,
+        description: Faker::Lorem.paragraph,
+        priority: ['high','low','normal'][rand 3],
+        company: Faker::Company.name,
+        status:  ['open','cloused','delayed'][rand 3],
+        assigned_to: Faker::Lorem.name,
+        contact: Faker::Lorem.name,
+        user_id: 1,
+        product_id: rand(3)
+      },
     ]
  
 

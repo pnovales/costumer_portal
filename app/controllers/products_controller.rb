@@ -1,24 +1,32 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :find_category
 
   # GET /products
   # GET /products.json
   def index
     @products = Product.all
+    #@products = Product.where(:category_id => @category.id)
+    #@products = @category.products.sorted
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+    @products = Product.find(params[:id])
   end
 
   # GET /products/new
   def new
     @product = Product.new
+    #@product = Product.new({:category_id => @category.id})
+    #@categories = Category.order('name ASC')
   end
 
   # GET /products/1/edit
   def edit
+    #@product = Product.find(params[:id])
+    #@categories = Category.order('name ASC')
   end
 
   # POST /products
@@ -71,4 +79,11 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :firmware_version, :description, :active, :category_id)
     end
+
+    def find_category
+      if params[:category_id]
+        @category = Category.find(params[:category_id])
+      end
+    end
+
 end
