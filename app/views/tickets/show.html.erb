@@ -37,12 +37,12 @@
 
 <p>
   <strong>User:</strong>
-  <%= @ticket.user_id %>
+  <%= @ticket.user.name %>
 </p>
 
 <p>
   <strong>Product:</strong>
-  <%= @ticket.product_id %>
+  <%= @ticket.product.name %>
 </p>
 
 <%= link_to 'Edit', edit_ticket_path(@ticket) %> |

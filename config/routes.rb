@@ -1,4 +1,8 @@
 CostumerPortal::Application.routes.draw do
+  resources :notices
+
+  resources :faqs
+
   resources :types
 
   resources :categories

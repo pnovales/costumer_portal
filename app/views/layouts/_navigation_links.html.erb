@@ -13,14 +13,17 @@
   <li><%= link_to 'Users', users_path %></li>
 <% end %>
 <% if user_signed_in? %>
-  <li><%= link_to 'Submit a Ticket', users_path %></li>
+  <li><%= link_to 'Create tickets', new_ticket_path %></li>
 <% end %>
 <% if user_signed_in? %>
-  <li><%= link_to 'Knowledgebase', users_path %></li>
+  <li><%= link_to 'Create faqs', new_faq_path %></li>
 <% end %>
 <% if user_signed_in? %>
-  <li><%= link_to 'News', users_path %></li>
+  <li><%= link_to 'Create news', new_notice_path %></li>
 <% end %>
 <% if user_signed_in? %>
-  <li><%= link_to 'Products', users_path %></li>
+  <li><%= link_to 'Create products', new_product_path %></li>
+<% end %>
+<% if user_signed_in? %>
+    <li><%= link_to 'Create categories', new_category_path %></li>
 <% end %>

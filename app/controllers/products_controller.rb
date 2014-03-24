@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  before_action :find_category
+  #before_action :find_category
 
   # GET /products
   # GET /products.json
@@ -80,10 +80,10 @@ class ProductsController < ApplicationController
       params.require(:product).permit(:name, :firmware_version, :description, :active, :category_id)
     end
 
-    def find_category
-      if params[:category_id]
-        @category = Category.find(params[:category_id])
-      end
-    end
+    #def find_category
+    #  if params[:category_id]
+    #    @category = Category.find(params[:category_id])
+    #  end
+    #end
 
 end

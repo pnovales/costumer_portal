@@ -3,7 +3,7 @@
       <h1 class="page-header"><%= current_user.name %></h1>
   <% else %>
       <h1 class="page-header">Show Form</h1>
-      <%= render 'devise/sessions/form_new' %>
+      <%= render 'devise/sessions/form' %>
   <% end %>
 </aside>
 
@@ -11,23 +11,23 @@
   <h1 class="page-header">Options</h1>
   <div class="row placeholders">
     <div class="col-xs-6 col-sm-3 placeholder">
-      <%= link_to tickets_path, :class => 'thumbnail' do %>
-        <%= image_tag "image.jpg", size: "200x200" %>Tickets
+      <%= link_to new_ticket_path, :class => 'thumbnail' do %>
+        <%= image_tag "image.jpg", size: "200x200" %>Submit Ticket
       <% end %>
     </div>
     <div class="col-xs-6 col-sm-3 placeholder">
-      <%= link_to notices_path, :class => 'thumbnail' do %>
+      <%= link_to new_ticket_path, :class => 'thumbnail' do %>
         <%= image_tag "image.jpg", size: "200x200" %>News
       <% end %>
     </div>
     <div class="col-xs-6 col-sm-3 placeholder">
-      <%= link_to faqs_path, :class => 'thumbnail' do %>
+      <%= link_to new_ticket_path, :class => 'thumbnail' do %>
         <%= image_tag "image.jpg", size: "200x200" %>FAQ
       <% end %>
     </div>
     <div class="col-xs-6 col-sm-3 placeholder">
-      <%= link_to products_path, :class => 'thumbnail' do %>
-        <%= image_tag "image.jpg", size: "200x200" %>Products
+      <%= link_to new_ticket_path, :class => 'thumbnail' do %>
+        <%= image_tag "image.jpg", size: "200x200" %>Knowledgebase
       <% end %>
     </div>
   </div>

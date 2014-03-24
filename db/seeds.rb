@@ -18,17 +18,69 @@ puts 'user: ' << user.name
 user.add_role :admin
 user.save
 
+puts 'DEFAULT USERS'
+user = User.find_or_create_by_email :name => ENV['USER_NAME'].dup, :email => ENV['USER_EMAIL'].dup, :password => ENV['USER_PASSWORD'].dup, :password_confirmation => ENV['USER_PASSWORD'].dup
+puts 'user: ' << user.name
+user.add_role :user
+user.save
+
+puts 'DEFAULT USERS'
+user = User.find_or_create_by_email :name => ENV['VIP_NAME'].dup, :email => ENV['VIP_EMAIL'].dup, :password => ENV['VIP_PASSWORD'].dup, :password_confirmation => ENV['VIP_PASSWORD'].dup
+puts 'user: ' << user.name
+user.add_role :VIP
+user.save
+
   categories = [
     {
       name: "Phones"
     },
     {
-      name: "switches"
+      name: "Switches"
     },
     {
       name: "Cameras"
     },
   ]
+
+  notices = [
+      {
+          title: Faker::Company.name,
+          content: Faker::Lorem.paragraph,
+          visible: true
+      },
+      {
+          title: Faker::Company.name,
+          content: Faker::Lorem.paragraph,
+          visible: true
+      },
+      {
+          title: Faker::Company.name,
+          content: Faker::Lorem.paragraph,
+          visible: true
+      },
+  ]
+
+  faqs = [
+      {
+          title: Faker::Company.name,
+          content: Faker::Lorem.paragraph,
+          visible: true,
+          efective: true
+      },
+      {
+          title: Faker::Company.name,
+          content: Faker::Lorem.paragraph,
+          visible: true,
+          efective: true
+      },
+      {
+          title: Faker::Company.name,
+          content: Faker::Lorem.paragraph,
+          visible: true,
+          efective: true
+      },
+  ]
+
 
  products = [ 
     {
@@ -135,4 +187,8 @@ user.save
   products.each { |product_attrs|   Product.create!(product_attrs) and puts '.' }
 
   tickets.each { |ticket_attrs|  Ticket.create!(ticket_attrs) and puts '.' }
+
+  notices.each { |notice_attrs|  Notice.create!(notice_attrs) and puts '.' }
+
+  faqs.each { |faq_attrs|  Faq.create!(faq_attrs) and puts '.' }
  
